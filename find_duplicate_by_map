@@ -1,21 +1,19 @@
-var arr = ["amit", "rahul", "divya", "puja","divya", "amit"];		
+var arr = ["amit", "rahul", "divya", "puja","divya", "amit", "amit"];		
 
 var mapped = new Map();
 
 for(var i=0;i<arr.length;i++){
-  var prev = mapped.size;
-  mapped.set(arr[i],null);
- 
-  if(prev == mapped.size){
-    mapped.set(arr[i], 2);
-  }
-  else{
-    mapped.set(arr[i], 1);
-  }
-  
+  mapped.set(arr[i],0);
 }
 
-
+for(var i=0;i<arr.length;i++){
+  var prev = mapped.size;
+  
+  if(prev == mapped.size){
+    var count = mapped.get(arr[i]);
+    mapped.set(arr[i], ++count);
+  }  
+}
 
 var key = mapped.keys()
 for(var k of key){
