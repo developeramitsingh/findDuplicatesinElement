@@ -1,4 +1,4 @@
-var arr = ["amit", "rahul", "divya", "puja","divya", "amit", "amit"];		
+var arr = ["rahul", "amit", "divya", "puja", "rahul"];		
 
 var mapped = new Map();
 
@@ -7,12 +7,8 @@ for(var i=0;i<arr.length;i++){
 }
 
 for(var i=0;i<arr.length;i++){
-  var prev = mapped.size;
-  
-  if(prev == mapped.size){
-    var count = mapped.get(arr[i]);
-    mapped.set(arr[i], ++count);
-  }  
+  var count = mapped.get(arr[i]);
+  mapped.set(arr[i], ++count);  
 }
 
 var key = mapped.keys()
