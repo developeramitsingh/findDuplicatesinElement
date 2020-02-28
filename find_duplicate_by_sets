@@ -1,0 +1,18 @@
+var arr = ["amit", "rahul", "divya", "puja","divya", "amit"];		
+var uni = new Set();
+
+for(var i of arr){
+  var size = uni.size;
+  var bool  = uni.add(i);
+  
+	if(size == bool.size){
+		console.log("Duplicates Found " + i );
+	}
+  else{
+    
+  }
+}
+
+uni.forEach(function(value){
+  console.log(value);
+})
